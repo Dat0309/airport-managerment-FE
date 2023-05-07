@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* ==== CUSTOM UI ELEMENTS AND STYLES ====*/
+/* ========================
+INCLUDE STYLES AND COMPONENTS
+===================== */
+
+/* Header */
+.head__top{
+    padding: 0 var( --mg-main );
+   
+}
+.logo{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(http://noibaiairport.vn/Assets/images/dt_2.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.logo__img{
+    height: 80px;
+}
+.nav__head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.nav__language{
+float: right;
+}
+.nav__list{
+    display: flex;
+}
+.nav__list-item{
+    padding: 10px 30px;
+    font-size: 16px;
+
+}
+.nav__list-item:hover{
+    background-color: brown;
+    color: #f0f0f0;
+}
+.head__bg{
+    text-align: center;
+    background-image: url(http://noibaiairport.vn/Assets/images/Flight_Arrival_02.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0;
+
+}
+.head__context{
+    font-size: 40px;
+    color: #f0f0f0;
+}
+#container{
+    padding: 0  var( --mg-main ) 30px var( --mg-main );
+}
+.container__header{
+   position: relative;
+   box-shadow: 0 5px 40px 20px #0a0a0a4d;
+   transform: translateY(-35%);
+   background-color: #f0f0f0;
+   margin: 0 40px;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.top__list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.top__item{
+    padding: 10px 0;
+    flex: 1;
+    text-align: center;
+}
+.item__target{
+      background-image: url(http://noibaiairport.vn/Assets/images/index_15.jpg);    
+      color: #f0f0f0;
+}
+
+.bottom__list{
+    display: flex;
+    margin-bottom: 8px;
+}
+.bottom__item{
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    /* padding: 10px 0; */
+    cursor: pointer;
+    opacity: 0.8;
+}
+.bottom__input{
+    flex: 2;
+   
+}
+.item__input{
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-color: transparent;
+    width: 100%;
+   
+}
+.item__input:hover{
+    cursor: text;
+}
+.item__btn{
+    padding: 15px 40px;
+    background-color: rgb(60, 60, 194);
+    color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.arriver__head{
+    padding-left : var(--mg-table);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(http://noibaiairport.vn/Assets/images/index_15.jpg);    
+    
+}
+.arriver__head .arriver__item{
+    color: #f0f0f0;
+}
+.arriver__nav{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+.arriver__item{
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    padding: 10px 0;
+}
+.list__item:hover{
+    background-color: darkgrey;
+}
+.arriver__dark{
+    background-color: darkgrey;
+}
+.item__long{
+    flex: 2;
+}
+.list__item{
+    display: flex;
+    padding-left:var(--mg-table) ;
+}
+.arriver__img{
+    height: 50px;
+}
+#footer{
+    padding: 40px var( --mg-main ) 10px var( --mg-main );
+    background-image: url(http://noibaiairport.vn/Assets/images/dt.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+.footer__container{
+    display: flex;
+    
+}
+.footer__item{
+    flex: 1;
+    padding: 20px;
+   
+}
+.footer__header{
+    font-size: 20px;
+    margin-bottom: 40px;
+    
+}
+.footer__copyright{
+    text-align: center;
+    font-size: 12px;
+}
+.footer__text{
+    font-weight: 100;
+}
+.form{
+    border: 1px solid #05074333;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.form__Context{
+    height: 100px;
+    
+    
+}
+
