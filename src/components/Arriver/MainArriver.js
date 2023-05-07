@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ArriverList from "./ListArriver";
+import { useDispatch, useSelector } from "react-redux";
+import { listFlight } from "../../Redux/Actions/FightAction";
+import Loading from "../LoaddingError/Loading";
+import Message from "../LoaddingError/Error";
 
 const MainArriver = () => {
+    const dispatch = useDispatch();
+
+    const flightList = useSelector((state) => state.listFlight);
+    const { loading, error, flight } = flightList;
+
+    useEffect(() => {
+        dispatch(listFlight("645731f7307b6fbda26ffac0"));
+    }, [dispatch])
     return (
         <>
             <div className="container">
@@ -37,7 +49,15 @@ const MainArriver = () => {
                         <li className="arriver__item">TRẠNG THÁI</li>
                     </ul>
                 </div>
-                <ArriverList />
+                {loading ? (
+                    <Loading />
+                )
+                    : error ? (
+                        <Message variant="alert-danger">{error}</Message>
+                    ) : (
+                        <ArriverList arriver={flight} />
+                    )
+                }
             </div>
         </>
     )

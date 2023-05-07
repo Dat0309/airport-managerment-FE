@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const MainHeader = () => {
     return (
         <>
-
             <header className="side-bar-top__menu">
                 <Link to={"/"} className="homepage">
                     <img className="header-logo" src="/images/sonrisa.png" alt="logo" />

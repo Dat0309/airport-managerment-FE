@@ -22,7 +22,7 @@ const Header = () => {
           </div>
         </div>
         <div className="head__bg">
-          <p className="head__context">Chuyễn bay</p>
+          <p className="head__context">Chuyến bay</p>
         </div>
       </div>
 

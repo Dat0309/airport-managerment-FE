@@ -1,15 +1,16 @@
 import React from "react";
 import ArriverCard from "./ArriverCard";
-import fights from "../../data/fightData";
 
-const ArriverList = () => {
+const ArriverList = (props) => {
+    const {arriver} = props;
+
     return (
         <>
             <div className="arriver__container">
                 <ul className="arriver__list">
                     {
-                        fights.map((arriver) => (
-                            <ArriverCard arriver = {arriver}/>
+                        arriver.map((flight) => (
+                            <ArriverCard arriver={flight}/>
                         ))
                     }
                 </ul>
