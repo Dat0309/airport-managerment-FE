@@ -1,27 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ArriverList from "./ListArriver";
 import { useDispatch, useSelector } from "react-redux";
 import { listFlight } from "../../Redux/Actions/FightAction";
 import Loading from "../LoaddingError/Loading";
 import Message from "../LoaddingError/Error";
+import airplanetypes from "../../data/airPlaneTypeData";
 
 const MainArriver = () => {
     const dispatch = useDispatch();
 
+    const [airplane, setAirplane] = useState("645731f7307b6fbda26ffac0");
+
+    const [activeIndex, setActiveIndex] = useState(null);
+
     const flightList = useSelector((state) => state.listFlight);
     const { loading, error, flight } = flightList;
 
+    const handleChange = (index, id) => {
+        setActiveIndex(index);
+        setAirplane(id);
+    }
+
     useEffect(() => {
-        dispatch(listFlight("645731f7307b6fbda26ffac0"));
-    }, [dispatch])
+        dispatch(listFlight(airplane));
+    }, [dispatch, airplane])
     return (
         <>
             <div className="container">
                 <div className="container__header">
                     <div className="header__top">
                         <ul className="top__list">
-                            <li className="top__item item__target">CHUYẾN ĐẾN</li>
-                            <li className="top__item">CHUYẾN ĐI</li>
+                            {
+                                airplanetypes.map((item, index) => (
+                                    <li key={index} onClick={() =>handleChange(index, item.id)} className={activeIndex === index ? 'top__item item__target' : 'top__item'}>
+                                        {item.name}
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className="header__bottom">
